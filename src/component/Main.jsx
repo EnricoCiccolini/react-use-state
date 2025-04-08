@@ -1,7 +1,15 @@
 import Schedule from "./Schedule"
+import { useState } from "react"
 export default function Main() {
-    const title = null
-    const description = null
+
+
+
+    let [title, setTitle] = useState(null)
+    const [description, setdescription] = useState(null)
+
+
+
+
 
 
     return (
@@ -9,14 +17,24 @@ export default function Main() {
 
             <h1>Learn Web Deplovement</h1>
             <div>
-                <button>HTML</button>
-                <button>CSS</button>
-                <button>JavaScript</button>
-                <button>Node.js</button>
-                <button>Express</button>
-                <button>ReactJS</button>
+                <button onClick={() => setTitle(title = 'HTML')}>HTML</button>
+
+                <button onClick={() => setTitle(title = 'CSS')}>CSS</button>
+
+                <button onClick={() => setTitle(title = 'JavaScript')}>JavaScript</button>
+
+                <button onClick={() => setTitle(title = 'Node.js')}>Node.js</button>
+
+                <button onClick={() => setTitle(title = 'Express')}>Express</button>
+
+                <button onClick={() => setTitle(title = 'ReactJS')}>ReactJS</button>
+
+                <Schedule title={title} description={description} />
+
             </div>
-            <Schedule title={title} description={description} />
+
+
+
         </>
     )
 }
