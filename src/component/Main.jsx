@@ -1,11 +1,12 @@
 import Schedule from "./Schedule"
 import { useState } from "react"
-import Button from "./ButtonComponent"
+
 import languages from "../data/languages"
 
 export default function Main() {
 
     let [object, setObject] = useState(null)
+    let [clicked, setClicked] = useState(null)
 
 
     return (
@@ -25,14 +26,14 @@ export default function Main() {
 
                 <button onClick={() => setTitle(title = 'ReactJS')}>ReactJS</button> */}
 
-                {languages.map(item => (<button key={item.id} onClick={() => setObject(item)}>{item.title}</button>))}
+                {languages.map(item => (<button key={item.id} className={clicked === item.id ? 'orange' : ''} onClick={() => { setObject(item); setClicked(item.id) }} >{item.title}</button>))}
 
 
 
                 {/* <Schedule title={title} description={description} /> */}
 
                 <Schedule object={object} />
-            </div>
+            </div >
 
 
 
