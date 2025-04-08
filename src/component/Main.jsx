@@ -1,15 +1,11 @@
 import Schedule from "./Schedule"
 import { useState } from "react"
+import Button from "./ButtonComponent"
+import languages from "../data/languages"
+
 export default function Main() {
 
-
-
     let [title, setTitle] = useState(null)
-    const [description, setdescription] = useState(null)
-
-
-
-
 
 
     return (
@@ -17,7 +13,7 @@ export default function Main() {
 
             <h1>Learn Web Deplovement</h1>
             <div>
-                <button onClick={() => setTitle(title = 'HTML')}>HTML</button>
+                {/* <button onClick={() => setTitle(title = 'HTML')}>HTML</button>
 
                 <button onClick={() => setTitle(title = 'CSS')}>CSS</button>
 
@@ -27,10 +23,13 @@ export default function Main() {
 
                 <button onClick={() => setTitle(title = 'Express')}>Express</button>
 
-                <button onClick={() => setTitle(title = 'ReactJS')}>ReactJS</button>
+                <button onClick={() => setTitle(title = 'ReactJS')}>ReactJS</button> */}
 
-                <Schedule title={title} description={description} />
+                {languages.map(item => (<button key={item.id} onClick={() => setTitle(item)}>{item.title}</button>))}
 
+                {/* <Schedule title={title} description={description} /> */}
+
+                <Schedule title={title} />
             </div>
 
 

@@ -1,13 +1,15 @@
 import languages from "../data/languages"
 
 export default function Schedule({ title, description }) {
-    let titleCard = languages.find(languages => languages.title === title)
+    // let titleCard = languages.find(languages => languages.title === title)
 
+    console.log(title)
 
-
-    let titleh1 = titleCard ? titleCard.title : 'nessun linguaggio selezionato'
-    let descriptionCard = titleCard ? titleCard.description : ''
-    console.log(titleh1)
+    // let titleh1 = titleCard ? titleCard.title : 'nessun linguaggio selezionato'
+    // let descriptionCard = titleCard ? titleCard.description : ''
+    // console.log(titleh1)
+    let titleh1 = title ? title.title : 'nessun linguaggio selezionato'
+    let descriptionCard = title ? title.description : ''
 
 
     return (
@@ -15,7 +17,7 @@ export default function Schedule({ title, description }) {
             <div>
                 <div>
                     <h1>{titleh1}</h1>
-                    <p>{descriptionCard}''</p>
+                    <p>{descriptionCard}</p>
                 </div>
 
             </div>
