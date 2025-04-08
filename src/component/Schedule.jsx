@@ -1,9 +1,8 @@
-import languages from "../data/languages"
 
-export default function Schedule({ title, description }) {
+
+export default function Schedule({ title }) {
     // let titleCard = languages.find(languages => languages.title === title)
 
-    console.log(title)
 
     // let titleh1 = titleCard ? titleCard.title : 'nessun linguaggio selezionato'
     // let descriptionCard = titleCard ? titleCard.description : ''
