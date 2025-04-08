@@ -5,14 +5,14 @@ import languages from "../data/languages"
 
 export default function Main() {
 
-    let [title, setTitle] = useState(null)
+    let [object, setObject] = useState(null)
 
 
     return (
         <>
 
             <h1>Learn Web Deplovement</h1>
-            <div>
+            <div className="container">
                 {/* <button onClick={() => setTitle(title = 'HTML')}>HTML</button>
 
                 <button onClick={() => setTitle(title = 'CSS')}>CSS</button>
@@ -25,11 +25,13 @@ export default function Main() {
 
                 <button onClick={() => setTitle(title = 'ReactJS')}>ReactJS</button> */}
 
-                {languages.map(item => (<button key={item.id} onClick={() => setTitle(item)}>{item.title}</button>))}
+                {languages.map(item => (<button key={item.id} onClick={() => setObject(item)}>{item.title}</button>))}
+
+
 
                 {/* <Schedule title={title} description={description} /> */}
 
-                <Schedule title={title} />
+                <Schedule object={object} />
             </div>
 
 

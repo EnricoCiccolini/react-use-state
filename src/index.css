@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    justify-items: center;
+}
+
+button {
+    background-color: cornflowerblue;
+    color: white;
+    border: 0px;
+    padding: 5px;
+    margin-top: 40px;
+    margin-left: 15px;
+    border-radius: 5%;
+}
+
+.card {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
